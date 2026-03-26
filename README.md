@@ -15,12 +15,26 @@
 - **Tools**: Ngrok, Pinggy, Pillow, OpenCV
 
 ## 📊 系統架構
-(此處建議貼上我們之前生成的 Mermaid 架構圖圖片)
+
+```mermaid
+graph TD
+    UserA(👤 輸入 A：上傳「全身照片」)
+    UserB1(📸 輸入 B1：自訂衣服照片)
+    UserB2(💬 輸入 B2：輸入文字需求)
+    Result(✨ 輸出：接收高擬真換裝照片)
+    
+    UserA --> State{狀態機}
+    UserB1 --> Pack[API 打包]
+    UserB2 --> Rec[推薦引擎]
+    Pack --> AI[☁️ Colab AI 運算]
+    AI --> Result
+
+<img width="1590" height="3320" alt="mermaid-diagram-2026-03-11-163822" src="https://github.com/user-attachments/assets/3613763d-85db-4b4b-a256-477bb9ca965a" />
+
+> **設計思維**：本系統採用微服務拆分邏輯，本地端負責高併發的 Webhook 接應，雲端負責重度 GPU 運算，達成效能與成本的平衡。
 
 ## 📁 目錄結構說明
 - `bot_server.py`: 系統中樞，負責 Webhook 與狀態機管理。
 - `comfy_client.py`: API 通訊模組，封裝 ComfyUI 呼叫邏輯。
 - `workflow_api.json`: AI 模型運算藍圖。
 - `dataset/`: 存放服裝型錄與標籤資料庫。
-
----
