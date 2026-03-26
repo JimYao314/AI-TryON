@@ -20,8 +20,8 @@ app = Flask(__name__)
 # ==========================================
 # 1. 金鑰與伺服器設定
 # ==========================================
-LINE_CHANNEL_ACCESS_TOKEN = 'YOUR_LINE_CHANNEL_ACCESS_TOKEN'
-LINE_CHANNEL_SECRET = 'YOUR_LINE_CHANNEL_SECRET'
+LINE_CHANNEL_ACCESS_TOKEN = 'f1JLVSPqO7PwSZpA0lN99MfkAWMM0x4LdGspioSm87n2lo9ZMcWtnR2VySR69JsdusHeuHhQf7S7/HjhlkelUpz7/q5+XYN/XPIx0rKLvOExh7i4oH0rSq70rbeRLrtZoFeJxj21Os/pso/a6E6qrAdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET = '8d678eb0a737e41d7ed366efb206da54'
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
