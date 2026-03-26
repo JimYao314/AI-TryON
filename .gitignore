@@ -1,0 +1,20 @@
+# Python 虛擬環境
+.venv/
+venv/
+env/
+
+# 快取與編譯檔
+__pycache__/
+*.pyc
+
+# 個人暫存資料
+temp/
+static/result_*.png
+static/result_*.jpg
+
+# 編輯器設定
+.idea/
+.vscode/
+
+# 資料庫 (如果是測試用的實體圖，建議不要全部上傳，只留幾張當範例)
+# dataset/garments/*.png (如果您不想公開全部圖庫)
